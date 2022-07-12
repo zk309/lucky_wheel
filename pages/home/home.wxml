@@ -1,0 +1,89 @@
+<view class="title">
+    <text>幸运大转盘</text>
+</view>
+
+<!-- 个人觉得 canvas 麻烦, so, 直接使用 css. -->
+<view class="container">
+  <!-- 外圆 -->
+  <view class="wrapper">
+    <!-- 内圆 -->
+    <view class="panel" id="zhuan" animation="{{donghua}}">
+      <!-- 三角形 one-->
+      <div class="sector">
+        <div class="sector-inner">
+            <span>谢谢参与</span>
+        </div>
+      </div>
+      <!-- two -->
+      <div class="sector">
+        <div class="sector-inner">
+            <span>一元</span>
+        </div>
+      </div>
+      <!-- three -->
+      <div class="sector">
+        <div class="sector-inner">
+            <span>三元</span>
+        </div>
+      </div>
+      <!-- four -->
+      <div class="sector">
+        <div class="sector-inner">
+            <span>五元</span>
+        </div>
+      </div>
+      <!-- five -->
+      <div class="sector">
+        <div class="sector-inner">
+            <span>六元</span>
+        </div>
+      </div>
+      <!-- six -->
+      <div class="sector">
+        <div class="sector-inner">
+            <span>十元</span>
+        </div>
+      </div>
+      <!-- 灯 -->
+      <!-- <div class="light"></div> -->
+    </view>
+    <!-- 圆心 -->
+    <view class="pointer" bindtap="rotate"> 
+        <text>开始</text>
+        <text>抽奖</text>
+      </view>
+    <!-- 灯 -->
+    <view class="light"></view>
+    <view class="light"></view>
+    <view class="light"></view>
+    <view class="light"></view>
+    <view class="light"></view>
+    <view class="light"></view>
+  </view>
+</view>
+
+<!-- 目前的机会 -->
+<view class="jihui">
+    你目前还有 <text>{{3 - record.length}}</text> 次机会.
+</view>
+
+<!-- 重新开始按钮 -->
+<view class="button">
+    <van-button round type="info" bindtap="getRestart">重新开始</van-button>
+</view>
+
+<!-- 活动说明 -->
+<view class="explain">
+    <view class="explain_title">活动说明</view>
+    <view class="explain_container">
+        <text>1. 不要作弊! ! !</text>
+        <text>2. 不要想着作弊! ! !</text>
+        <text>3. 不要以为我不知道你想着作弊! ! !</text>
+        <text>4. 不要以为你作弊的时候我抓不到你! ! !</text>
+        <text>5. 不要以为你以为的就是别人以为的! ! !</text>
+        <text>6. 活动每人仅有三次抽奖机会;</text>
+    </view>
+</view>
+
+<!-- vant weapp 的 tabbar 标签栏 组件-->
+<my-tabbar></my-tabbar>

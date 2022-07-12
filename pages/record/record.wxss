@@ -1,0 +1,19 @@
+/* pages/record/record.wxss */
+page {
+    background-color: skyblue;
+}
+
+.record {
+    margin: 50rpx auto;
+    width: 80%;
+    background-color: #fff;
+    opacity: .7;
+    text-align: center;
+    border-radius: 30rpx;
+    line-height: 80rpx;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+}

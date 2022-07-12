@@ -1,0 +1,192 @@
+/* pages/home/home.wxss */
+page {
+    background-color: pink;
+}
+
+/* 幸运大转盘标题 */
+.title {
+  text-align: center;
+  line-height: 150rpx;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* 机会 */
+.jihui {
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+.jihui text {
+    color: red;
+}
+
+/* 重新开始按钮 */
+.button {
+    margin: 20rpx;
+    display: block;
+    text-align: center;
+}
+
+/* 活动说明 */
+.explain {
+    margin: 20rpx auto 10rpx;
+    padding: 10rpx;
+    width: 90%;
+    background-color: #fff;
+    opacity: .5;
+    border-radius: 20rpx;
+}
+.explain_title {
+    line-height: 100rpx;
+    font-size: 20px;
+    font-weight: 900;
+}
+.explain_container text {
+    display: block;
+    line-height: 70rpx;
+}
+
+
+/* 转盘样式 */
+/* 盒子 */
+.container {
+  /* position: relative; */
+  padding: 50rpx 0;
+}
+/* 外圈 */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600rpx;
+  width: 600rpx;
+  padding: 20rpx;
+  background-color: #c0381f;
+  box-shadow: #000000 0rpx 0rpx 10rpx;
+  border-radius: 50%;
+}
+/* 内圈 */
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500rpx;
+  width: 500rpx;
+  background-color: #b7b7b7;
+  border-radius: 50%;
+}
+/* 圆心 */
+.pointer {
+  position: absolute;
+  z-index: 999;
+  height: 80rpx;
+  width: 80rpx;
+  padding: 6rpx;
+  color: #fff899;
+  font-size: 12px;
+  text-align: center;
+  background-color: #dc5b5b;
+  border-radius: 50%;
+  border: 1px solid #c0381f;
+}
+.pointer text {
+  display: block;
+  text-align: center;
+}
+/* 指针 */
+.pointer::after {
+  content: '';
+  position: absolute;
+  left: 35rpx;
+  top: -48rpx;
+  border-width: 24rpx 12rpx;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #c0381f;
+}
+
+/* 奖品区域 */
+.sector {
+  position: absolute;
+  height: 500rpx;
+  width: 250rpx;
+  /* background-color: pink; */
+  border-radius: 0 250rpx 250rpx 0;
+  transform-origin: left center;
+  transform: translate(125rpx, 0) rotate(-30deg);
+  overflow: hidden;
+}
+.sector-inner {
+  display: block;
+  height: 500rpx;
+  width: 250rpx;
+  /* background-color: skyblue; */
+  transform-origin: right center;
+  transform: translate(-250rpx, 0) rotate(60deg);
+}
+/* 文字 */
+.sector-inner span {
+  display: block;
+  text-align: center;
+  /* transform-origin: center; */
+  transform: rotate(-30deg) translateY(60rpx);
+  color: #d46854;
+  font-weight: 900;
+}
+.sector:nth-of-type(2) {
+  transform: translate(125rpx, 0) rotate(30deg);
+}
+.sector:nth-of-type(3) {
+  transform: translate(125rpx, 0) rotate(90deg);
+}
+ .sector:nth-of-type(4) {
+  transform: translate(125rpx, 0) rotate(150deg);
+}
+.sector:nth-of-type(5) {
+  transform: translate(125rpx, 0) rotate(210deg);
+}
+.sector:nth-of-type(6) {
+  transform: translate(125rpx, 0) rotate(270deg);
+}
+.sector:nth-child(2n+1) .sector-inner {
+  background: #fef6e0;
+}
+.sector:nth-child(2n) .sector-inner {
+  background: #ffffff;
+}
+
+/* 灯 */
+.light {
+  position: absolute;
+  top: 200rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: pink;
+}
+/* 好恶心的 css */
+.light:nth-of-type(7) {
+  transform: translate(0rpx, 0rpx);
+}
+.light:nth-of-type(8) {
+  transform: translate(260rpx, 150rpx);
+}
+.light:nth-of-type(3) {
+  transform: translate(260rpx, 430rpx);
+}
+.light:nth-of-type(4) {
+  transform: translate(0rpx, 580rpx);
+}
+.light:nth-of-type(5) {
+  transform: translate(-260rpx, 430rpx);
+}
+.light:nth-of-type(6) {
+  transform: translate(-260rpx, 150rpx);
+}
+.light:nth-of-type(2n){
+  background-color: #fef6e0;
+}
+.light:nth-of-type(2n+1) {
+  background-color: #ffffff;
+}

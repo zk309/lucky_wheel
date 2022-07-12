@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/record/record"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#7fc0e1",
+    "navigationBarTitleText": "幸运大抽奖",
+    "navigationBarTextStyle":"black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "my-tabbar": "/components/tabbar/tabbar",
+    "van-button": "@vant/weapp/button/index"
+  }  
+}

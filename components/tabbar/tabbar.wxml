@@ -1,0 +1,9 @@
+<van-tabbar 
+  active="{{ active }}" 
+  placeholder="true"
+  bind:change="onChange"
+  border="true"
+  active-color="#d84855">
+  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+  <van-tabbar-item icon="search" info="{{ record.length }}">抽奖记录</van-tabbar-item>
+</van-tabbar>

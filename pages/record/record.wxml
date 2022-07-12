@@ -1,0 +1,13 @@
+<!-- 中奖记录 -->
+<view class="record">
+    <view class="title">中奖记录:</view>
+    <view class="none" wx:if="{{ record.length == 0 }}">没有记录, 去抽奖吧!</view>
+    <view class="list" wx:else>
+        <view wx:for="{{ record }}" wx:key="index">
+            {{ item }}
+        </view>
+    </view>
+</view>
+
+<!-- vant weapp 的 tabbar 标签栏 -->
+<my-tabbar></my-tabbar>
